@@ -1,46 +1,45 @@
 # SAAS-2-Projects
 
-A monorepo for managing Hermes-powered webshop projects.
+A monorepo for managing SAAS (Software as a Service) business projects with Hermes orchestration.
 
 ## Structure
 
 ```
 saas-2-projects/
-├── webshops/          # Individual webshop projects
-│   ├── shop-1/
-│   └── shop-n/
-├── templates/         # Reusable templates and boilerplates
-├── docs/              # Documentation and guides
+├── projects/          # Individual SAAS applications
+├── infrastructure/    # IaC (Terraform, deployment configs)
+├── services/          # Microservices and APIs
+├── libraries/         # Shared code and utilities
 ├── scripts/           # Automation and deployment scripts
-└── .hermes/          # Hermes-specific configurations
+├── docs/              # Documentation and runbooks
+└── config/            # Configuration templates and secrets
 ```
 
 ## Quick Start
 
-1. **Create a new webshop project:**
+1. **Create a new SAAS project:**
    ```bash
-   cp -r templates/webshop .webshops/my-new-shop
-   cd .webshops/my-new-shop
+   mkdir projects/my-saas-app
    ```
 
-2. **Deploy with Hermes:**
+2. **Deploy with Hermes orchestration:**
    ```bash
-   # Use the deploy skill for automated deployments
+   hermes deploy --profile orchestrator-webshop-2
    ```
 
-3. **Schedule product scans:**
+3. **Run automated CI/CD:**
    ```bash
-   # Cron jobs for inventory updates
+   hermes cron list
    ```
 
-## Features
+## Automation
 
-- ✅ Product research automation
-- ✅ SEO optimization workflows
 - ✅ Automated deployments
-- ✅ Inventory synchronization
+- ✅ Infrastructure as Code
+- ✅ CI/CD pipelines
+- ✅ Monitoring & alerts
 - ✅ Analytics integration
 
 ## Managed by
 
-Hermes Orchestrator-Webshop agent for automated e-commerce management.
+Hermes Orchestrator agent for automated SAAS operations.
